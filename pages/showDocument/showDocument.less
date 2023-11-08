@@ -1,0 +1,135 @@
+/* pages/showDocument/showDocument.wxss */
+page {
+  background-color: #f5f7fb;
+  overflow: hidden;
+  height: 100%;
+}
+
+.head {
+  padding: 40rpx;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+
+  view {
+    display: flex;
+    align-items: center;
+  }
+
+  .doc {
+    width: 70%;
+    font-size: 24rpx;
+    background-color: #e5f3fd;
+    border-radius: 10rpx;
+    padding: 16rpx;
+
+    .icon {
+      display: inline;
+      background-color: #fff;
+      border-radius: 50%;
+      margin-right: 20rpx;
+    }
+  }
+
+  .operate {
+    view {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 16rpx;
+      margin-left: 20rpx;
+    }
+  }
+}
+
+.chatBox {
+
+  // padding-bottom: 200rpx;
+  ::after {
+    display: table;
+    content: '';
+  }
+
+  .box {
+    padding: 30rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .name {
+      font-size: 24rpx;
+      color: #4b4c50;
+    }
+
+    .content {
+      background-color: #fff;
+      border-radius: 16rpx;
+      padding: 30rpx;
+      max-width: 80%;
+      margin-top: 16rpx;
+      font-size: 24rpx;
+    }
+  }
+
+  .myBox {
+    align-items: flex-end;
+
+    .content {
+      background-color: #21a3ff;
+      color: #fff;
+    }
+  }
+}
+
+.search {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  .inputStyle {
+    background-color: #f7f7f7;
+    border-radius: 6rpx;
+    padding: 0 30rpx;
+    font-size: 24rpx;
+  }
+}
+
+.help {
+  position: fixed;
+  right: 0;
+  bottom: 15%;
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50% 0 0 50%;
+  background-color: #23a4ff;
+  text-align: center;
+  font-size: 40rpx;
+  line-height: 70rpx;
+  border: 1px solid #f2f2f2;
+  z-index: 1;
+  box-shadow: 0 7rpx 6rpx #e6ebe9;
+}
+
+.maskStyle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(2px);
+  .question{
+    width: 90%;
+    position: absolute;
+    bottom: 100rpx;
+  }
+  .content {
+    background-color: #cce5ff;
+    border-radius: 16rpx;
+    padding: 30rpx;
+    max-width: 80%;
+    margin:0 auto;
+    margin-top: 16rpx;
+    font-size: 24rpx;
+  }
+}

@@ -1,0 +1,52 @@
+<view class='head'>
+  <view class='doc'>
+    <view class='icon'>
+      <van-icon custom-style='padding:0;margin:6rpx;background-color:#fff' name="todo-list-o" />
+    </view>
+    <text>{{file.name}}</text>
+  </view>
+  <view class='operate'>
+    <view>
+      <van-icon size='44rpx' custom-style='padding:0;margin:6rpx;background-color:#fff;display:inline-block' name="share-o" />
+      <text>导出</text>
+    </view>
+    <view>
+      <van-icon size='44rpx' custom-style='padding:0;margin:6rpx;background-color:#fff;display:inline-block' name="link-o" />
+      <text>复制</text>
+    </view>
+  </view>
+</view>
+<scroll-view id='page' scroll-y="true" style="height:{{height}}rpx" scroll-top="{{scrollTop}}">
+  <view class='chatBox'>
+    <view wx:for="{{chatList}}" id="item{{index}}" class="{{item.type==0?'box':'box myBox'}}" wx:key="index">
+      <view class='name'>
+        {{item.name}}
+      </view>
+      <view class='content'>
+        {{item.content}}
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view class='search'>
+  <van-cell-group>
+    <van-field value="{{ content }}" center clearable bind:change="searchChange" placeholder="问些文档相关的问题吧" border="{{ false }}" input-class="inputStyle" use-button-slot>
+      <van-button bindtap="send" slot="button" size="small" type="info">
+        发送
+      </van-button>
+    </van-field>
+  </van-cell-group>
+</view>
+<view class='help' bindtap="showMask">
+  <van-icon color='#fff' name="question-o" />
+</view>
+<view class='maskStyle' wx:if="{{show}}" bindtap="hideMask" style="height:{{windowHeight}}rpx">
+  <view class='question'>
+    <view class='question-list'>
+      <view class='content' wx:for="{{questionList}}" wx:key="index">
+        {{item}}
+      </view>
+    </view>
+  </view>
+</view>
+<van-toast id="van-toast" />

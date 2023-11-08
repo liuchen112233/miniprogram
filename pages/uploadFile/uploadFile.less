@@ -1,0 +1,41 @@
+.container {
+  height: 100vh;
+  position: relative;
+
+  .customWidth {
+    position: absolute !important;
+    width: 50% !important;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 12rpx 10rpx #e6ebe9;
+  }
+
+  .using {
+    position: absolute;
+    bottom: 0;
+    padding: 40rpx;
+
+    view {
+      margin: 6rpx;
+      font-size: 24rpx;
+    }
+
+    .docbox {
+      background-color: #e5f3fd;
+      padding: 10rpx 20rpx;
+      border-radius: 10rpx;
+      margin-top: 20rpx;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      white-space: pre-wrap;
+    }
+    .icon{
+      display: inline;
+      background-color: #fff;
+      border-radius: 50%;
+      margin-right: 20rpx;
+    }
+  }
+}

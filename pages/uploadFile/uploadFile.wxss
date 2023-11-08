@@ -1,0 +1,37 @@
+.container {
+  height: 100vh;
+  position: relative;
+}
+.container .customWidth {
+  position: absolute !important;
+  width: 50% !important;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 12rpx 10rpx #e6ebe9;
+}
+.container .using {
+  position: absolute;
+  bottom: 0;
+  padding: 40rpx;
+}
+.container .using view {
+  margin: 6rpx;
+  font-size: 24rpx;
+}
+.container .using .docbox {
+  background-color: #e5f3fd;
+  padding: 10rpx 20rpx;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: pre-wrap;
+}
+.container .using .icon {
+  display: inline;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}

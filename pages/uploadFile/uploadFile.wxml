@@ -1,0 +1,21 @@
+<!--pages/uploadFile/uploadFile.wxml-->
+<view class='container'>
+  <view>
+    <van-button bindtap="uploadFile" round custom-class='customWidth' type="info" block>上传文档文件</van-button>
+  </view>
+  <view class="using">
+    <view>使用方法</view>
+    <view>1、从手机文件夹上传文档文件</view>
+    <view>2、苹果手机可以先将文档发送给传输助手，点击上传，从聊天会话中选择传输助手，然后选择需要解析的语音</view>
+    <view>3、目前支持的文档格式有：“pdf、word、ppt、txt”</view>
+    <view bindtap="navigateToshow" class="docbox" wx:if="{{file}}">
+      <view>
+        <view class='icon'>
+          <van-icon custom-style='padding:0;margin:6rpx;background-color:#fff' name="todo-list-o" />
+        </view>
+        <text>{{file.name}}</text>
+      </view>
+      <van-icon custom-style='padding:0;margin:0' name="arrow" />
+    </view>
+  </view>
+</view>
