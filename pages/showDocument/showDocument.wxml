@@ -30,7 +30,7 @@
 </scroll-view>
 <view class='search'>
   <van-cell-group>
-    <van-field value="{{ content }}" center clearable bind:change="searchChange" placeholder="问些文档相关的问题吧" border="{{ false }}" input-class="inputStyle" use-button-slot>
+    <van-field value="{{ content }}" data-params="content" center clearable bind:change="searchChange" placeholder="问些文档相关的问题吧" border="{{ false }}" input-class="inputStyle" use-button-slot>
       <van-button bindtap="send" slot="button" size="small" type="info">
         发送
       </van-button>

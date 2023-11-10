@@ -2,6 +2,7 @@
 <view class='container'>
   <view>
     <van-button bindtap="uploadFile" round custom-class='customWidth' type="info" block>上传文档文件</van-button>
+    <mp-uploader></mp-uploader>
   </view>
   <view class="using">
     <view>使用方法</view>

@@ -3,12 +3,15 @@ import Toast from '@vant/weapp/toast/toast';
 // pages/showDocument/showDocument.js
 Page({
   searchChange: function (e) {
+    let str = e.detail
     this.setData({
-      content: e.detail
+      content: str
     })
-  },
+    console.log(str,this.data);
+  }, 
   send: function () {
     if (!this.data.content) {
+      console.log(this.data.content);
       Toast('请输入数据~');
       return
     }

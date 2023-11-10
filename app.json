@@ -31,5 +31,9 @@
       "iconPath": "assets/images/mine.png",
       "selectedIconPath": "assets/images/mine1.png"
     }]
+  },
+  "useExtendedLib": {
+    "kbone": true,
+    "weui": true
   }
 }

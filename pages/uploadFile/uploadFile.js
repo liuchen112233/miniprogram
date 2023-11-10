@@ -1,21 +1,13 @@
 // pages/uploadFile/uploadFile.js
 Page({
   uploadFile: function () {
-    wx.getSystemInfo().then(res => {
-      if (res.model.includes('iPhone')) {
-        wx.chooseMessageFile({
-          count: 1,
-          type: 'file',
-          success: (res) => {
-            console.log(res);
-            this.setData({
-              file: res.tempFiles[0]
-            })
-          }
-        })
-      } else {
-        wx.getFileSystemManager(1, 'all').then(res => {
-          console.log(res);
+    wx.chooseMessageFile({
+      count: 1,
+      type: 'file',
+      extension: ['.pdf', '.doc', '.ppt', '.txt', 'pdf', 'doc', 'ppt', 'txt'],
+      success: (res) => {
+        this.setData({
+          file: res.tempFiles[0]
         })
       }
     })
@@ -34,14 +26,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    file: null
+    file: null,
+    isIphone: false,
+    files: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    wx.getSystemInfo().then(res => {
+      if (res.model.includes('iPhone')) {
+        this.setData({
+          isIphone: true
+        })
+      }
+    })
   },
 
   /**
